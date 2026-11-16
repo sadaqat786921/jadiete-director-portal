@@ -1,0 +1,11 @@
+{
+  "title": "Jadeite Systems \u00b7 Director",
+  "description": "Jadeite Glazing \u2014 Director portal: dashboard, pipeline, projects, diary, deliveries, needs attention, approvals, reports, team and audit.",
+  "language": "en-GB",
+  "robots": {
+    "index": false
+  },
+  "icons": {
+    "icon": "favicon.png"
+  }
+}
