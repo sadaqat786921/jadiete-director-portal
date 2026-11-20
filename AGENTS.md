@@ -24,7 +24,7 @@ A Vite dev server is already running on `$PORT` (default 8443). Changes hot-relo
 - **Installation diary:** week view by fitter (previous / next week), ready-but-not-booked queue, pending clash/override requests (the office books; the Director approves exceptions).
 - **Deliveries:** due, late and arrived supplier orders from the office’s order dates; ask for an update.
 - **Needs attention:** overdue, blocked, incomplete, not booked, late deliveries, open snags, sync errors — owner, next action, due, days late; ask for an update; open the record.
-- **Approvals:** installation overrides, diary clashes, salesperson changes, data import approval, permission changes → approve (optional note) or decline (reason); the change is applied (e.g. the fitting appears in the diary) and saved in the audit history.
+- **Approvals:** installation overrides, diary clashes, salesperson changes, data import approval → approve (optional note) or decline (reason); the change is applied (e.g. the fitting appears in the diary) and saved in the audit history.
 - **Reports:** Sales, Jobs and diary, Money (from Xero), Team; period; definitions; drill down; export CSV; print.
 - **Team:** workload, next job and status for everyone; send a message. **Audit history:** search, filter, before/after, export. **My settings:** details, sign-in, what to be told about.
 

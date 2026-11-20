@@ -58,7 +58,7 @@ export const PROJECTS0: Project[] = [
 
 /* ---------------- Approvals (authorised overrides) ---------------- */
 export type Approval = {
-  id: string; kind: 'Installation override' | 'Diary clash' | 'Change salesperson' | 'Data import' | 'Permission change';
+  id: string; kind: 'Installation override' | 'Diary clash' | 'Change salesperson' | 'Data import';
   title: string; record: string; link: string; by: string; byRole: string; asked: string; why: string; rule: string; impact: string;
   status: 'Waiting' | 'Approved' | 'Declined'; decidedOn?: string; note?: string; urgent?: boolean;
 };
@@ -71,8 +71,6 @@ export const APPROVALS0: Approval[] = [
     why: 'James is locked out and off until Wednesday. The customer wants an answer on the roof lantern this week.', rule: 'One customer has one salesperson; changing it needs a reason', impact: 'Emma Clarke owns the customer, quote FP-55118 and the follow-up task' },
   { id: 'AP-28', kind: 'Data import', title: 'Import 1,251 customers and active jobs from the old system', record: 'IM-03 · old-system-customers.xlsx', link: '', by: 'Tom Fletcher', byRole: 'System Admin', asked: '14 Oct',
     why: 'Trial import checked: 1,251 rows ready, 21 duplicates added to existing customers, 12 rows with problems left out (error report attached).', rule: 'The client approves before anything is imported into the live platform', impact: 'Customers and jobs from the old system appear in every portal' },
-  { id: 'AP-27', kind: 'Permission change', title: 'Let salespeople see payments for their own customers', record: 'Sales role · Payments (from Xero)', link: '', by: 'Tom Fletcher', byRole: 'System Admin', asked: '13 Oct',
-    why: 'Sales need to check the deposit before marking a deal as Won.', rule: 'Exact permissions are approved through the role matrix', impact: 'Sales: Payments (from Xero) changes from “Only theirs” to “View only” for their own customers' },
   { id: 'AP-26', kind: 'Installation override', title: 'Fit Hartley Dental on a Saturday', record: 'JG-10493 · Hartley Dental', link: '/projects/JG-10493', by: 'Sarah Mitchell', byRole: 'Office Admin', asked: '12 Oct', status: 'Approved', decidedOn: '12 Oct', note: 'Fine — the practice is closed on Saturdays, less disruption.',
     why: 'The practice is closed on Saturday, so day 2 is less disruptive.', rule: 'No fitting on weekends without approval', impact: 'Day 2 on Sat 17 Oct' } as Approval,
   { id: 'AP-25', kind: 'Change salesperson', title: 'Move Gary Wells’ customers to Emma Clarke', record: '7 customers', link: '', by: 'Tom Fletcher', byRole: 'System Admin', asked: '30 Sep', status: 'Approved', decidedOn: '30 Sep', note: 'Agreed — Gary has left.',
@@ -144,7 +142,6 @@ export const AUDIT0: Audit[] = [
   { id: 'a24', when: '14 Oct, 17:45', day: 2, who: 'Sarah Mitchell', action: 'Closed a job and published the guarantee', record: 'JG-10455 · Mr Khan', area: 'Jobs', source: 'Office Admin' },
   { id: 'a23', when: '13 Oct, 15:10', day: 3, who: 'Sarah Mitchell', action: 'Changed a fitting date', record: 'JG-10482', area: 'Diary', source: 'Office Admin', before: [['Fitting', 'Wed 21 Oct → Thu 22 – Fri 23 Oct']], reason: 'Frames arrive 20 Oct' },
   { id: 'a22', when: '12 Oct, 11:20', day: 4, who: 'James Whitfield', action: 'Approved a Saturday fitting', record: 'JG-10493 · AP-26', area: 'Approvals', source: 'Director', reason: 'Practice closed on Saturdays' },
-  { id: 'a21', when: '01 Oct, 09:30', day: 15, who: 'James Whitfield', action: 'Approved a role change', record: 'Sales role', area: 'Permissions', source: 'Director', before: [['Payments (from Xero)', 'No access → Only theirs']] },
   { id: 'a20', when: '30 Sep, 17:10', day: 16, who: 'Tom Fletcher', action: 'Deactivated a user', record: 'Gary Wells', area: 'Users', source: 'System Admin', before: [['Customers', 'Gary Wells → Emma Clarke']], reason: 'Left the company' },
   { id: 'a19', when: '30 Sep, 16:40', day: 16, who: 'Mike Harris', action: 'Marked a deal as Won', record: 'EN-2283 · Sarah & David Smith', area: 'Sales', source: 'Sales portal', before: [['Stage', 'Quote Sent → Won']] },
 ];

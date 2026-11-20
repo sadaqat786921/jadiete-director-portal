@@ -55,7 +55,7 @@ export function Team() {
   );
 }
 
-const AREAS = ['All', 'Sales', 'Jobs', 'Diary', 'Approvals', 'Permissions', 'Users', 'Sign-in', 'Updates', 'Notes', 'Reports'];
+const AREAS = ['All', 'Sales', 'Jobs', 'Diary', 'Approvals', 'Users', 'Sign-in', 'Updates', 'Notes', 'Reports'];
 const ini = (n: string) => n.split(/[ &]+/).filter(Boolean).map(p => p[0]).join('').slice(0, 2).toUpperCase();
 export function Audit() {
   const st = useStore();
